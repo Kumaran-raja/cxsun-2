@@ -114,10 +114,21 @@ export default function WebMenu() {
                         </div>
 
                         <div className="flex flex-col items-center space-x-4">
-                            <div className="hidden bg-white bg-gradient-to-r bg-clip-text text-2xl font-black text-transparent sm:block">
+
+                            <div className={cn(
+                                "hidden text-2xl font-black sm:block",
+                                scrolled
+                                    ? "text-gray-900 dark:text-white"
+                                    : "text-white dark:text-gray-200"
+                            )}>
                                 ALTEX Labs
                             </div>
-                            <div className="hidden text-sm font-medium text-gray-400 sm:block dark:text-cyan-400">
+                            <div className={cn(
+                                "hidden text-sm font-medium sm:block",
+                                scrolled
+                                    ? "text-gray-500 dark:text-gray-400"
+                                    : "text-gray-300 dark:text-cyan-400"
+                            )}>
                                 Textile Testing Labs
                             </div>
                         </div>
@@ -137,9 +148,18 @@ export default function WebMenu() {
                                             <button
                                                 className={cn(
                                                     'group relative flex items-center gap-2 px-4 py-1 text-sm font-semibold transition-all duration-300',
-                                                    'text-white hover:text-cyan-500 dark:text-black dark:hover:text-cyan-400',
-                                                    active &&
-                                                        'text-white dark:text-cyan-400',
+                                                    // Light mode text
+                                                    scrolled
+                                                        ? 'text-gray-900 hover:text-black'
+                                                        : 'text-white hover:text-cyan-400',
+                                                    // Dark mode text
+                                                    scrolled
+                                                        ? 'dark:text-gray-100 dark:hover:text-cyan-400'
+                                                        : 'dark:text-gray-200 dark:hover:text-cyan-400',
+                                                    active && (scrolled
+                                                            ? 'text-black dark:text-cyan-400 font-bold'
+                                                            : 'text-cyan-400 dark:text-cyan-300 font-bold'
+                                                    ),
                                                 )}
                                             >
                                                 <Beaker className="h-4 w-4" />
@@ -208,9 +228,18 @@ export default function WebMenu() {
                                     href={item.href}
                                     className={cn(
                                         'group relative px-3 py-1 text-sm font-semibold transition-all duration-300',
-                                        'text-white hover:text-cyan-500 dark:text-slate-200 dark:hover:text-cyan-400',
-                                        active &&
-                                            'font-bold text-cyan-500 dark:text-cyan-400',
+                                        // Light mode text
+                                        scrolled
+                                            ? 'text-gray-900 hover:text-black'
+                                            : 'text-white hover:text-cyan-400',
+                                        // Dark mode text
+                                        scrolled
+                                            ? 'dark:text-gray-100 dark:hover:text-cyan-400'
+                                            : 'dark:text-gray-200 dark:hover:text-cyan-400',
+                                        active && (scrolled
+                                                ? 'text-black dark:text-cyan-400 font-bold'
+                                                : 'text-cyan-400 dark:text-cyan-300 font-bold'
+                                        ),
                                     )}
                                 >
                                     {item.name}
@@ -220,6 +249,21 @@ export default function WebMenu() {
                                                 ' from-white to-cyan-500 transition-all duration-500',
                                             'scale-0 group-hover:scale-100',
                                             active && 'scale-100',
+
+
+                                            // Light mode text
+                                            scrolled
+                                                ? 'text-gray-900 hover:text-black'
+                                                : 'text-white hover:text-cyan-400',
+                                            // Dark mode text
+                                            scrolled
+                                                ? 'dark:text-gray-100 dark:hover:text-cyan-400'
+                                                : 'dark:text-gray-200 dark:hover:text-cyan-400',
+                                            active && (scrolled
+                                                    ? 'text-black dark:text-cyan-400 font-bold'
+                                                    : 'text-cyan-400 dark:text-cyan-300 font-bold'
+                                            ),
+
                                         )}
                                     />
                                 </Link>

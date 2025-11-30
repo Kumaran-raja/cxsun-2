@@ -1,14 +1,12 @@
-// resources/js/components/Counters.tsx
 import { useEffect, useState } from 'react';
-import { Beaker, Users, FileCheck, Clock } from 'lucide-react';
+import { TestTubeDiagonal, Users, FileCheck, Clock } from 'lucide-react';
 
 const counters = [
-    { icon: Beaker, end: 28547, label: "Tests Completed", suffix: "+" },
+    { icon: TestTubeDiagonal , end: 28547, label: "Tests Completed", suffix: "+" },
     { icon: Users, end: 5000, label: "Happy Clients", suffix: "+" },
     { icon: FileCheck, end: 99.9, label: "Accuracy Rate", suffix: "%" },
     { icon: Clock, end: 7, label: "Max Days TAT", suffix: " Days" },
 ];
-
 export default function Counters() {
     return (
         <section className="py-20 bg-gradient-to-b from-blue-950 to-slate-900 text-white">
