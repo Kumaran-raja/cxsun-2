@@ -1,6 +1,5 @@
 // resources/js/pages/welcome.tsx
 import WebLayout from '@/layouts/web-layout';
-import FullScreenSlider from '@/components/blocks/slider/slider';
 import ServicesSection from '@/components/blocks/home/ServicesSection';
 import TestimonialsSection from '@/components/blocks/home/TestimonialsSection';
 import { Head } from '@inertiajs/react';
