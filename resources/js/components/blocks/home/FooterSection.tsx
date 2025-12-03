@@ -9,8 +9,8 @@ export default function FooterSection() {
 
     // Hardcoded data — no Laravel/Inertia needed
     const footer = {
-        companyName: 'Tech Media',
-        tagline: 'Trusted computer repair center since 2002.',
+        companyName: 'Altex',
+        tagline: 'Trusted Textile Testing lab since 2024.',
         address: '436, Avinashi Road, Near CITU Office, Tiruppur, Tamil Nadu 641602',
         email: 'support@techmedia.in',
         phone: '9894244460',

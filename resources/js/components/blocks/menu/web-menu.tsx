@@ -167,7 +167,7 @@ export default function WebMenu() {
                                                 className={cn(
                                                     'group relative flex items-center gap-2 px-4 py-2 text-sm font-semibold transition-all duration-300  bg-gradient-to-r',
                                                     scrolled
-                                                        ? 'text-gray-900 hover:text-blue-700 dark:text-gray-100 dark:hover:text-cyan-400'
+                                                        ? 'text-gray-900 hover:text-cyan-700 dark:text-gray-100 dark:hover:text-cyan-400'
                                                         : 'text-white hover:text-cyan-300 dark:text-gray-100 dark:hover:text-cyan-300',
                                                     active &&
                                                         'font-bold text-blue-600 dark:text-cyan-400',
@@ -246,10 +246,10 @@ export default function WebMenu() {
                                     className={cn(
                                         'group relative px-4 py-2 text-sm font-semibold transition-all duration-300',
                                         scrolled
-                                            ? 'text-gray-900 hover:text-blue-700 dark:text-gray-100 dark:hover:text-cyan-400'
+                                            ? 'text-gray-900 hover:text-cyan-700 dark:text-gray-100 dark:hover:text-cyan-400'
                                             : 'text-white hover:text-cyan-300 dark:text-gray-100 dark:hover:text-cyan-300',
                                         active &&
-                                            'font-bold text-blue-600 dark:text-cyan-400',
+                                            'font-bold text-cyan-500 dark:text-cyan-400',
                                     )}
                                 >
                                     {item.name}
@@ -257,7 +257,7 @@ export default function WebMenu() {
                                         className={cn(
                                             'absolute -bottom-1 left-1/2 h-0.5 w-12 -translate-x-1/2 rounded-full transition-all duration-500 ease-out  bg-gradient-to-r',
                                             scrolled
-                                                ? 'bg-blue-600 dark:bg-cyan-500'
+                                                ? 'bg-cyan-600 dark:bg-cyan-500'
                                                 : 'from-white to-cyan-500',
                                             'scale-x-0 group-hover:scale-x-100',
                                             active && 'scale-x-100',
@@ -300,7 +300,7 @@ export default function WebMenu() {
                                 <Button
                                     asChild
                                     variant="ghost"
-                                    className="text-blue-600 hover:bg-blue-50 dark:text-cyan-400 dark:hover:bg-blue-900/20"
+                                    className="text-cyan-400 hover:bg-blue-50 dark:text-cyan-400 dark:hover:bg-cyan-900/20"
                                 >
                                     <Link href={login()}>Log in</Link>
                                 </Button>
@@ -320,7 +320,7 @@ export default function WebMenu() {
                             <Button
                                 variant="ghost"
                                 size="icon"
-                                className="text-gray-700 dark:text-gray-300"
+                                className="text-gray-100 dark:text-gray-300"
                             >
                                 {localStorage.getItem('theme') === 'dark' ||
                                 (!localStorage.getItem('theme') &&

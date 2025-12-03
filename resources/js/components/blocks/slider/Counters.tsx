@@ -3,7 +3,7 @@ import { TestTubeDiagonal, Users, FileCheck, Clock } from 'lucide-react';
 
 const counters = [
     { icon: TestTubeDiagonal , end: 28547, label: "Tests Completed", suffix: "+" },
-    { icon: Users, end: 5000, label: "Happy Clients", suffix: "+" },
+    { icon: Users, end: 2000, label: "Happy Clients", suffix: "+" },
     { icon: FileCheck, end: 99.9, label: "Accuracy Rate", suffix: "%" },
     { icon: Clock, end: 7, label: "Max Days TAT", suffix: " Days" },
 ];
