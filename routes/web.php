@@ -35,8 +35,6 @@ Route::get('/accreditations', function () {
     ]);
 })->name('accreditations');
 
-
-
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('dashboard', function () {
         return Inertia::render('dashboard');
@@ -45,5 +43,37 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 Route::get('/service/{id}', [ServiceController::class, 'show'])
     ->name('service.show');
+
+    // pvr routes
+
+    Route::get('/pvr', function () {
+    return Inertia::render('web/pvr/Home', [
+        'canRegister' => Features::enabled(Features::registration()),
+    ]);
+})->name('pvrhome');
+
+Route::get('/pvrabouts', function () {
+    return Inertia::render('web/pvr/about', [
+        'canRegister' => Features::enabled(Features::registration()),
+    ]);
+})->name('pvrabouts');
+
+Route::get('/pvrproducts', function () {
+    return Inertia::render('web/pvr/Product', [
+        'canRegister' => Features::enabled(Features::registration()),
+    ]);
+})->name('pvrproducts');
+
+Route::get('/pvrweb-contacts', function () {
+    return Inertia::render('web/pvr/Contact', [
+        'canRegister' => Features::enabled(Features::registration()),
+    ]);
+})->name('pvrweb-contacts');
+
+Route::get('/pvrmanufacture', function () {
+    return Inertia::render('web/pvr/Manufacture', [
+        'canRegister' => Features::enabled(Features::registration()),
+    ]);
+})->name('pvrmanufacture');
 
 require __DIR__.'/settings.php';

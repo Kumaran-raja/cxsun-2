@@ -5,6 +5,7 @@ import ProcessCard from '@/components/blocks/process/ProcessCard';
 import AlTexSlider from '@/components/blocks/slider/altex';
 import Counters from '@/components/blocks/slider/Counters';
 import FloatingWhatsApp from '@/components/blocks/slider/FloatingWhatsApp';
+import BrandMarquee from '@/components/pvr/BrandMarquee';
 import ServiceCard, { Service } from '@/components/ServiceCard';
 import { Button } from '@/components/ui/button';
 import WebLayout from '@/layouts/web-layout';
@@ -450,6 +451,21 @@ export default function Welcome() {
                 'We can help interpret results, highlight improvement areas and plan retesting if required.',
         },
     ];
+
+    const brands = [
+        { name: 'H&M' },
+        { name: 'ZARA' },
+        { name: 'GAP' },
+        { name: 'Walmart' },
+        { name: 'Target' },
+        { name: 'Next' },
+        { name: 'M&S' },
+        { name: 'Primark' },
+        { name: 'Decathlon' },
+        { name: "Levi's" },
+        { name: 'Adidas' },
+        { name: 'Nike' },
+    ];
     return (
         <WebLayout title="Welcome">
             <Head>
@@ -457,7 +473,7 @@ export default function Welcome() {
             </Head>
 
             <AlTexSlider />
-            <div className="px-4 pb-15 lg:px-[10%] bg-background">
+            <div className="bg-background px-4 pb-15 lg:px-[10%]">
                 <p className="pt-10 text-center text-3xl font-bold text-foreground">
                     How It Works
                 </p>
@@ -617,30 +633,19 @@ export default function Welcome() {
             </section>
 
             {/* CLIENT LOGOS */}
-            <section className="bg-gradient-to-br from-blue-900 to-blue-800  py-20">
+            <section className="bg-gradient-to-br from-blue-900 to-blue-800 py-20">
                 <div className="container mx-auto px-6 text-center">
                     <h2 className="mb-12 text-4xl font-bold text-primary-foreground">
                         Trusted by Leading Brands & Exporters
                     </h2>
-                    <div className="grid grid-cols-3 gap-8 opacity-70 grayscale md:grid-cols-6">
-                        {[
-                            'H&M',
-                            'ZARA',
-                            'GAP',
-                            'Walmart',
-                            'Target',
-                            'Next',
-                            'M&S',
-                            'Primark',
-                            'Decathlon',
-                            "Levi's",
-                            'Adidas',
-                            'Nike',
-                        ].map((brand) => (
-                            <div key={brand} className="text-3xl font-bold text-primary-foreground">
-                                {brand}
-                            </div>
-                        ))}
+                    <div className="my-10 py-10 md:my-20 md:py-10">
+                        <BrandMarquee
+                            type="big-text"
+                            text=""
+                            brands={brands}
+                            speed={30}
+                            height={16}
+                        />
                     </div>
                 </div>
             </section>
@@ -676,7 +681,7 @@ export default function Welcome() {
                         <Button
                             size="lg"
                             variant="secondary"
-                            className="py-6 text-lg md:col-span-2 text-primary-foreground"
+                            className="py-6 text-lg text-primary-foreground md:col-span-2"
                         >
                             Get Free Quote Now <ChevronRight className="ml-2" />
                         </Button>
@@ -693,24 +698,36 @@ export default function Welcome() {
                     <div className="grid gap-8 text-center md:grid-cols-3">
                         <div>
                             <MapPin className="mx-auto mb-4 h-12 w-12 text-cyan-600" />
-                            <h3 className="text-xl font-bold">Location</h3>
-                            <p className="text-muted-foreground">
-                                123 Textile Zone, Ludhiana, Punjab 141001, India
+                            <h3 className="text-xl font-bold mb-2">Location</h3>
+                            <p className="">
+                                ALTEX LABS <br />
+                                Textile Testing Laboratory
+                                <br />
+                                Address: 20/1 S.A Kathar layout main road,
+                                <br />
+                                Angeripalayam road ,<br />
+                                Tiruppur-641602 Tamilnadu.
                             </p>
                         </div>
-                        <div>
+                        <div className=' flex flex-col'>
                             <Phone className="mx-auto mb-4 h-12 w-12 text-cyan-600" />
-                            <h3 className="text-xl font-bold">
+                            <h3 className="text-xl font-bold mb-2">
                                 Call / WhatsApp
                             </h3>
-                            <p className="text-2xl font-bold">
-                                +91 98765 43210
-                            </p>
+                            <a href='tel:9566646863' className="text-xl font-bold">
+                                +91 95 66 64 68 63
+                            </a>
+                            <a href='tel:9566686062' className="text-xl font-bold">
+                                +91 95 66 68 60 62
+                            </a>
                         </div>
                         <div>
                             <Mail className="mx-auto mb-4 h-12 w-12 text-cyan-600" />
-                            <h3 className="text-xl font-bold">Email Us</h3>
-                            <p className="text-lg">info@altex.in</p>
+                            <h3 className="text-xl font-bold mb-2">Email Us</h3>
+                            <p className="text-lg"> info@altexlabs.in</p>
+                            <p className="text-lg"> csk@altexlabs.in </p>
+                            <p>Sample Submission & Logistics</p>
+                            <p className="text-lg"> info@altexlabs.in </p>
                         </div>
                     </div>
                 </div>

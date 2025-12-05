@@ -1,0 +1,69 @@
+import React from "react";
+
+type NexusCardItem = {
+  logo?: string; // image path
+  icon?: React.ReactNode; // optional React icon
+  alt?: string;
+  title: string;
+  className?: string; // custom styles per block
+};
+
+type NexusCardProps = {
+  sectionTitle: string;
+  sectionDescription: string;
+  leftClassName?: string; // styling for left content
+  rightClassName?: string; // styling for right grid
+  items: NexusCardItem[];
+};
+
+export default function NexusCard({
+  sectionTitle,
+  sectionDescription,
+  leftClassName,
+  rightClassName,
+  items,
+}: NexusCardProps) {
+  return (
+    <section className="bg-[#1e0478] text-highlight2-foreground py-16 px-6">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        {/* LEFT CONTENT */}
+        <div className={leftClassName}>
+          <h2 className="text-4xl font-bold mb-4">{sectionTitle}</h2>
+          <p className="text-lg text-gray-200">{sectionDescription}</p>
+        </div>
+
+        {/* RIGHT CONTENT (LOGOS / ICONS GRID) */}
+        <div
+          className={`grid grid-cols-3 gap-4 max-w-lg mx-auto ${rightClassName || ""}`}
+        >
+          {items.map((item, idx) => (
+            <div
+              key={idx}
+              className={`p-6 flex flex-col items-center justify-center rounded-lg ${item.className || ""}`}
+            >
+              {item.logo ? (
+                <img
+                  src={item.logo}
+                  alt={item.alt || item.title}
+                  loading="lazy"
+                  className={`mb-2 transition-all duration-300 ${
+                    item.className?.includes("col-span-2") ? "h-10 w-24" : "h-10 w-10"
+                  }`}
+                />
+              ) : item.icon ? (
+                <div
+                  className={`mb-2 transition-all duration-300 text-4xl ${
+                    item.className?.includes("col-span-2") ? "text-5xl" : ""
+                  }`}
+                >
+                  {item.icon}
+                </div>
+              ) : null}
+              <p className="text-sm sm:text-base text-center">{item.title}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -566,7 +566,7 @@ accreditations.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => 
     
     accreditations.form = accreditationsForm
 /**
- * @see routes/web.php:41
+ * @see routes/web.php:39
  * @route '/dashboard'
  */
 export const dashboard = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -580,7 +580,7 @@ dashboard.definition = {
 } satisfies RouteDefinition<["get","head"]>
 
 /**
- * @see routes/web.php:41
+ * @see routes/web.php:39
  * @route '/dashboard'
  */
 dashboard.url = (options?: RouteQueryOptions) => {
@@ -588,7 +588,7 @@ dashboard.url = (options?: RouteQueryOptions) => {
 }
 
 /**
- * @see routes/web.php:41
+ * @see routes/web.php:39
  * @route '/dashboard'
  */
 dashboard.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -596,7 +596,7 @@ dashboard.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     method: 'get',
 })
 /**
- * @see routes/web.php:41
+ * @see routes/web.php:39
  * @route '/dashboard'
  */
 dashboard.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -605,7 +605,7 @@ dashboard.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 })
 
     /**
- * @see routes/web.php:41
+ * @see routes/web.php:39
  * @route '/dashboard'
  */
     const dashboardForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -614,7 +614,7 @@ dashboard.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     })
 
             /**
- * @see routes/web.php:41
+ * @see routes/web.php:39
  * @route '/dashboard'
  */
         dashboardForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -622,7 +622,7 @@ dashboard.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
             method: 'get',
         })
             /**
- * @see routes/web.php:41
+ * @see routes/web.php:39
  * @route '/dashboard'
  */
         dashboardForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -636,3 +636,358 @@ dashboard.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
         })
     
     dashboard.form = dashboardForm
+/**
+ * @see routes/web.php:49
+ * @route '/pvr'
+ */
+export const pvrhome = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: pvrhome.url(options),
+    method: 'get',
+})
+
+pvrhome.definition = {
+    methods: ["get","head"],
+    url: '/pvr',
+} satisfies RouteDefinition<["get","head"]>
+
+/**
+ * @see routes/web.php:49
+ * @route '/pvr'
+ */
+pvrhome.url = (options?: RouteQueryOptions) => {
+    return pvrhome.definition.url + queryParams(options)
+}
+
+/**
+ * @see routes/web.php:49
+ * @route '/pvr'
+ */
+pvrhome.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: pvrhome.url(options),
+    method: 'get',
+})
+/**
+ * @see routes/web.php:49
+ * @route '/pvr'
+ */
+pvrhome.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+    url: pvrhome.url(options),
+    method: 'head',
+})
+
+    /**
+ * @see routes/web.php:49
+ * @route '/pvr'
+ */
+    const pvrhomeForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+        action: pvrhome.url(options),
+        method: 'get',
+    })
+
+            /**
+ * @see routes/web.php:49
+ * @route '/pvr'
+ */
+        pvrhomeForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+            action: pvrhome.url(options),
+            method: 'get',
+        })
+            /**
+ * @see routes/web.php:49
+ * @route '/pvr'
+ */
+        pvrhomeForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+            action: pvrhome.url({
+                        [options?.mergeQuery ? 'mergeQuery' : 'query']: {
+                            _method: 'HEAD',
+                            ...(options?.query ?? options?.mergeQuery ?? {}),
+                        }
+                    }),
+            method: 'get',
+        })
+    
+    pvrhome.form = pvrhomeForm
+/**
+ * @see routes/web.php:55
+ * @route '/pvrabouts'
+ */
+export const pvrabouts = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: pvrabouts.url(options),
+    method: 'get',
+})
+
+pvrabouts.definition = {
+    methods: ["get","head"],
+    url: '/pvrabouts',
+} satisfies RouteDefinition<["get","head"]>
+
+/**
+ * @see routes/web.php:55
+ * @route '/pvrabouts'
+ */
+pvrabouts.url = (options?: RouteQueryOptions) => {
+    return pvrabouts.definition.url + queryParams(options)
+}
+
+/**
+ * @see routes/web.php:55
+ * @route '/pvrabouts'
+ */
+pvrabouts.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: pvrabouts.url(options),
+    method: 'get',
+})
+/**
+ * @see routes/web.php:55
+ * @route '/pvrabouts'
+ */
+pvrabouts.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+    url: pvrabouts.url(options),
+    method: 'head',
+})
+
+    /**
+ * @see routes/web.php:55
+ * @route '/pvrabouts'
+ */
+    const pvraboutsForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+        action: pvrabouts.url(options),
+        method: 'get',
+    })
+
+            /**
+ * @see routes/web.php:55
+ * @route '/pvrabouts'
+ */
+        pvraboutsForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+            action: pvrabouts.url(options),
+            method: 'get',
+        })
+            /**
+ * @see routes/web.php:55
+ * @route '/pvrabouts'
+ */
+        pvraboutsForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+            action: pvrabouts.url({
+                        [options?.mergeQuery ? 'mergeQuery' : 'query']: {
+                            _method: 'HEAD',
+                            ...(options?.query ?? options?.mergeQuery ?? {}),
+                        }
+                    }),
+            method: 'get',
+        })
+    
+    pvrabouts.form = pvraboutsForm
+/**
+ * @see routes/web.php:61
+ * @route '/pvrproducts'
+ */
+export const pvrproducts = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: pvrproducts.url(options),
+    method: 'get',
+})
+
+pvrproducts.definition = {
+    methods: ["get","head"],
+    url: '/pvrproducts',
+} satisfies RouteDefinition<["get","head"]>
+
+/**
+ * @see routes/web.php:61
+ * @route '/pvrproducts'
+ */
+pvrproducts.url = (options?: RouteQueryOptions) => {
+    return pvrproducts.definition.url + queryParams(options)
+}
+
+/**
+ * @see routes/web.php:61
+ * @route '/pvrproducts'
+ */
+pvrproducts.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: pvrproducts.url(options),
+    method: 'get',
+})
+/**
+ * @see routes/web.php:61
+ * @route '/pvrproducts'
+ */
+pvrproducts.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+    url: pvrproducts.url(options),
+    method: 'head',
+})
+
+    /**
+ * @see routes/web.php:61
+ * @route '/pvrproducts'
+ */
+    const pvrproductsForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+        action: pvrproducts.url(options),
+        method: 'get',
+    })
+
+            /**
+ * @see routes/web.php:61
+ * @route '/pvrproducts'
+ */
+        pvrproductsForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+            action: pvrproducts.url(options),
+            method: 'get',
+        })
+            /**
+ * @see routes/web.php:61
+ * @route '/pvrproducts'
+ */
+        pvrproductsForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+            action: pvrproducts.url({
+                        [options?.mergeQuery ? 'mergeQuery' : 'query']: {
+                            _method: 'HEAD',
+                            ...(options?.query ?? options?.mergeQuery ?? {}),
+                        }
+                    }),
+            method: 'get',
+        })
+    
+    pvrproducts.form = pvrproductsForm
+/**
+ * @see routes/web.php:67
+ * @route '/pvrweb-contacts'
+ */
+export const pvrwebContacts = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: pvrwebContacts.url(options),
+    method: 'get',
+})
+
+pvrwebContacts.definition = {
+    methods: ["get","head"],
+    url: '/pvrweb-contacts',
+} satisfies RouteDefinition<["get","head"]>
+
+/**
+ * @see routes/web.php:67
+ * @route '/pvrweb-contacts'
+ */
+pvrwebContacts.url = (options?: RouteQueryOptions) => {
+    return pvrwebContacts.definition.url + queryParams(options)
+}
+
+/**
+ * @see routes/web.php:67
+ * @route '/pvrweb-contacts'
+ */
+pvrwebContacts.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: pvrwebContacts.url(options),
+    method: 'get',
+})
+/**
+ * @see routes/web.php:67
+ * @route '/pvrweb-contacts'
+ */
+pvrwebContacts.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+    url: pvrwebContacts.url(options),
+    method: 'head',
+})
+
+    /**
+ * @see routes/web.php:67
+ * @route '/pvrweb-contacts'
+ */
+    const pvrwebContactsForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+        action: pvrwebContacts.url(options),
+        method: 'get',
+    })
+
+            /**
+ * @see routes/web.php:67
+ * @route '/pvrweb-contacts'
+ */
+        pvrwebContactsForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+            action: pvrwebContacts.url(options),
+            method: 'get',
+        })
+            /**
+ * @see routes/web.php:67
+ * @route '/pvrweb-contacts'
+ */
+        pvrwebContactsForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+            action: pvrwebContacts.url({
+                        [options?.mergeQuery ? 'mergeQuery' : 'query']: {
+                            _method: 'HEAD',
+                            ...(options?.query ?? options?.mergeQuery ?? {}),
+                        }
+                    }),
+            method: 'get',
+        })
+    
+    pvrwebContacts.form = pvrwebContactsForm
+/**
+ * @see routes/web.php:73
+ * @route '/pvrmanufacture'
+ */
+export const pvrmanufacture = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: pvrmanufacture.url(options),
+    method: 'get',
+})
+
+pvrmanufacture.definition = {
+    methods: ["get","head"],
+    url: '/pvrmanufacture',
+} satisfies RouteDefinition<["get","head"]>
+
+/**
+ * @see routes/web.php:73
+ * @route '/pvrmanufacture'
+ */
+pvrmanufacture.url = (options?: RouteQueryOptions) => {
+    return pvrmanufacture.definition.url + queryParams(options)
+}
+
+/**
+ * @see routes/web.php:73
+ * @route '/pvrmanufacture'
+ */
+pvrmanufacture.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: pvrmanufacture.url(options),
+    method: 'get',
+})
+/**
+ * @see routes/web.php:73
+ * @route '/pvrmanufacture'
+ */
+pvrmanufacture.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+    url: pvrmanufacture.url(options),
+    method: 'head',
+})
+
+    /**
+ * @see routes/web.php:73
+ * @route '/pvrmanufacture'
+ */
+    const pvrmanufactureForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+        action: pvrmanufacture.url(options),
+        method: 'get',
+    })
+
+            /**
+ * @see routes/web.php:73
+ * @route '/pvrmanufacture'
+ */
+        pvrmanufactureForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+            action: pvrmanufacture.url(options),
+            method: 'get',
+        })
+            /**
+ * @see routes/web.php:73
+ * @route '/pvrmanufacture'
+ */
+        pvrmanufactureForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+            action: pvrmanufacture.url({
+                        [options?.mergeQuery ? 'mergeQuery' : 'query']: {
+                            _method: 'HEAD',
+                            ...(options?.query ?? options?.mergeQuery ?? {}),
+                        }
+                    }),
+            method: 'get',
+        })
+    
+    pvrmanufacture.form = pvrmanufactureForm

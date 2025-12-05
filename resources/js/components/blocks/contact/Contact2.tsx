@@ -95,7 +95,7 @@ export default function Contact2({
   };
 
   return (
-    <div className="bg-gradient-to-br from-blue-900/90 to-blue-800/60 px-4 lg:px-[10%]">
+    <div className=" px-4 lg:px-[10%]">
       <h1 className="sr-only">{title}</h1>
 
       {/* 🔔 Alert */}
@@ -112,16 +112,16 @@ export default function Contact2({
         {/* 📍 Address & Social Section */}
         <div className="space-y-8 px-2 text-foreground p-6 md:p-12 lg:px-20 py-20 flex flex-col justify-center">
           <div className="flex justify-center flex-col gap-5">
-            <p className="text-lg text-primary-foreground">{title}</p>
-            <h1 className="text-2xl text-primary-foreground font-bold">{subTitle}</h1>
-            <p className="text-primary-foreground/80 text-sm">{description}</p>
+            <p className="text-lg tex-foreground">{title}</p>
+            <h1 className="text-2xl text-foreground font-bold">{subTitle}</h1>
+            <p className="text-foreground/80 text-sm">{description}</p>
 
             {/* Address */}
             <div className="flex items-start gap-3 mt-6 w-[70%]">
               <IoLocation className="text-primary-foreground text-4xl mt-1 p-2 shrink-0 bg-primary rounded-md w-12 h-12"/>
               <div>
-                <p className="font-bold text-primary-foreground">Our Location</p>
-                <p className="text-primary-foreground">{addresses}</p>
+                <p className="font-bold text-foreground">Our Location</p>
+                <p className="text-foreground">{addresses}</p>
               </div>
             </div>
 
@@ -130,12 +130,12 @@ export default function Contact2({
               <FaPhoneAlt className="text-primary-foreground text-4xl mt-1 p-2 shrink-0 bg-primary rounded-md w-12 h-12" />
 
               <div>
-                <p className="font-bold text-primary-foreground">Phone Number</p>
+                <p className="font-bold text-foreground">Phone Number</p>
                 {phone.map((ph, idx) => (
                   <a
                     key={idx}
                     href={`tel:${ph.value}`}
-                    className="cursor-pointer text-primary-foreground"
+                    className="cursor-pointer text-foreground"
                   >
                     {ph.label} <br />
                   </a>
@@ -148,13 +148,13 @@ export default function Contact2({
               <AiOutlineMail className="text-primary-foreground text-4xl mt-1 p-2 shrink-0 bg-primary rounded-md w-12 h-12" />
 
               <div>
-                <p className="font-bold text-primary-foreground">Email Address</p>
+                <p className="font-bold text-foreground">Email Address</p>
 
                 {email.map((em, idx) => (
                   <a
                     key={idx}
                     href={`mailto:${em.value}`}
-                    className="cursor-pointer text-primary-foreground"
+                    className="cursor-pointer text-foreground"
                   >
                     {em.label} <br />
                   </a>
@@ -171,7 +171,7 @@ export default function Contact2({
             {Array.from({ length: 45 }).map((_, i) => (
               <span
                 key={i}
-                className="w-1 h-1 bg-primary-foreground shadow rounded-full block"
+                className="w-1 h-1 bg-foreground shadow rounded-full block"
               ></span>
             ))}
           </div>
@@ -180,7 +180,7 @@ export default function Contact2({
             {Array.from({ length: 30 }).map((_, i) => (
               <span
                 key={i}
-                className="w-1 h-1 bg-primary-foreground rounded-full block"
+                className="w-1 h-1 bg-foreground rounded-full block"
               ></span>
             ))}
           </div>
@@ -189,7 +189,7 @@ export default function Contact2({
             {Array.from({ length: 48 }).map((_, i) => (
               <span
                 key={i}
-                className="w-1 h-1 bg-primary-foreground rounded-full block"
+                className="w-1 h-1 bg-foreground rounded-full block"
               ></span>
             ))}
           </div>
@@ -198,7 +198,7 @@ export default function Contact2({
             {Array.from({ length: 30 }).map((_, i) => (
               <span
                 key={i}
-                className="w-1 h-1 bg-primary-foreground rounded-full block"
+                className="w-1 h-1 bg-foreground rounded-full block"
               ></span>
             ))}
           </div>

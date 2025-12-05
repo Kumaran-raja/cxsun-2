@@ -104,7 +104,7 @@ const serviceData = [
             'Award-winning architectural designs',
             'Affordable yet luxury-focused builds',
         ],
-        icon: FaHome,
+        icon: "FaHome",
         link: '/services/residential',
     },
     {
@@ -246,7 +246,7 @@ const serviceData = [
             'Innovative layouts for productivity',
             'Trusted by global industries',
         ],
-        icon: FaIndustry,
+        icon: "FaIndustry",
         link: '/services/industrial',
     },
     {
@@ -363,7 +363,7 @@ const serviceData = [
             'Market-ready reporting formats',
             'Fast results with expert consultation',
         ],
-        icon: FaTools,
+        icon: "FaTools",
         link: '/services/renovation',
     },
     {
@@ -439,9 +439,11 @@ export default function Service() {
         icon: iconMap[s.icon as IconName], // cast here too
     }));
 
+    console.log("hi")
     const activeService =
         updatedServices.find((s) => s.id === id) || updatedServices[0];
 
+        console.log(activeService)
     return (
         <WebLayout title="Service">
             <div>
