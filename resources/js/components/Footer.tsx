@@ -1,61 +1,15 @@
 import { cn } from '@/lib/utils';
 import { Link } from '@inertiajs/react';
-import { FaAngleRight, FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
+import { FaAngleRight, FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 export default function Footer() {
     return (
-        <footer className="bg-footer pt-16 pb-6 text-gray-300 px-4">
-            {/* ───── HEADER TOP BOXES ───── */}
-            <div className="mx-auto mb-16 grid grid-cols-1 gap-8 px-4 md:grid-cols-3">
-                {/* Location */}
-                <div className="border border-gray-700 p-6">
-                    <h3 className="mb-4 text-xl font-bold">Where We Are</h3>
-                    <p>
-                        20/1 S.A Kathar layout main road,
-                        <br />
-                        Angeripalayam road, <br /> Tiruppur-641602 Tamilnadu.
-                    </p>
-                    <a
-                        href="#"
-                        className="mt-3 flex items-center gap-1 text-footer-foreground"
-                    >
-                        <FaAngleRight /> Find More
-                    </a>
-                </div>
-
-                {/* Our Services */}
-                <div className="border border-gray-700 p-6">
-                    <h3 className="mb-4 text-xl font-bold">Our Services</h3>
-                    <p>A Total Solutions Provider for Quality Assurance</p>
-                    <a
-                        href="#"
-                        className="mt-3 flex items-center gap-1 text-footer-foreground"
-                    >
-                        <FaAngleRight /> Learn More
-                    </a>
-                </div>
-
-                {/* Contact */}
-                <div className="border border-gray-700 p-6">
-                    <h3 className="mb-4 text-xl font-bold">Contact Us</h3>
-                    <p>Mail us: info@altexlabs.in ,csk@altexlabs.in</p>
-                    <p>Call us: +91 9566686062</p>
-                    <a
-                        href="#"
-                        className="mt-3 flex items-center gap-1 text-footer-foreground"
-                    >
-                        <FaAngleRight /> Learn More
-                    </a>
-                </div>
-            </div>
-
+        <footer className="bg-footer px-4 pt-16 pb-6 text-gray-300">
             <hr className="border-ring/30" />
             {/* ───── MAIN FOOTER CONTENT ───── */}
             <div className="mx-auto grid grid-cols-1 gap-10 px-4 pt-6 md:grid-cols-4">
                 {/* About */}
                 <div>
-                    <h3 className="mb-2 text-xl font-bold">ABOUT US</h3>
-                    <div className="mb-4 h-0.5 w-16 bg-footer-foreground"></div>
                     <div className="flex items-center">
                         <Link
                             href="/"
@@ -94,15 +48,21 @@ export default function Footer() {
                     <div className="mt-6 flex gap-3">
                         <a
                             href="#"
-                            className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-800"
+                            className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-800 hover:scale-115"
                         >
                             <FaFacebookF />
                         </a>
                         <a
                             href="#"
-                            className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-800"
+                            className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-800 hover:scale-115"
                         >
                             <FaLinkedinIn />
+                        </a>
+                        <a
+                            href="#"
+                            className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-800 hover:scale-115"
+                        >
+                            <FaInstagram />
                         </a>
                     </div>
                 </div>
@@ -137,7 +97,7 @@ export default function Footer() {
                         ].map((m, i) => (
                             <li
                                 key={i}
-                                className="flex cursor-pointer gap-2 hover:text-footer-foreground"
+                                className="flex items-center cursor-pointer gap-2 hover:text-footer-foreground"
                             >
                                 <span>
                                     <FaAngleRight />

@@ -19,7 +19,7 @@ export default function WebContact() {
 
                     {/* Text Content */}
                     <div className="absolute z-10 text-center text-white">
-                        <h1 className="mb-3 text-4xl font-bold">About Us</h1>
+                        <h1 className="mb-3 text-4xl lg:text-6xl font-bold">Contact Us</h1>
                         <p className="px-[20%]">
                             Have an event in mind? Get in touch with our team
                             for catering, decoration, and complete event
