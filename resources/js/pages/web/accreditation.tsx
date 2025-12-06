@@ -5,7 +5,7 @@ export default function AccreditationPage() {
     return (
         <WebLayout title="Accreditations">
             {/* Hero Section */}
-            <div className="relative flex h-[400px] w-full items-center justify-center">
+            <div className="relative flex h-[40vh] sm:h-[50vh] xl:h-[40vh] w-full items-center justify-center">
                 {/* Background Image */}
                 <img
                     src="/images/home/slider/textile4.jpg"
@@ -18,11 +18,10 @@ export default function AccreditationPage() {
 
                 {/* Text Content */}
                 <div className="absolute z-10 text-center text-white">
-                    <h1 className="mb-4 text-5xl font-bold tracking-tight text-white md:text-6xl lg:text-7xl dark:text-white">
-                        Our{' '}
-                        <span className="text-blue-700">Accreditations</span>
+                    <h1 className="text-whit mb-4 text-4xl md:text-6xl font-bold tracking-tight">
+                        Our Accreditations
                     </h1>
-                    <p className="mb-6 text-xl text-white/70 dark:text-gray-300">
+                    <p className="mb-6 text-xl text-white">
                         Trusted. Certified. Recognized for excellence.
                     </p>
                 </div>

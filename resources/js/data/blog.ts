@@ -41,7 +41,7 @@ export const Blogs: BlogPost[] = [
     PostImage: "/images/home/slider/textile4.jpg",
     author: {
       name: "Ravi",
-      avatar: "/assets/team/image.png",
+      avatar: "",
     },
     date: "September 5, 2025",
     category: "Construction & Technology",
@@ -81,7 +81,7 @@ export const Blogs: BlogPost[] = [
     PostImage: "/images/home/slider/textile4.jpg",
     author: {
       name: "Ananya",
-      avatar: "/assets/team/image.png",
+      avatar: "",
     },
     date: "September 12, 2025",
     category: "Commercial Construction",
@@ -120,7 +120,7 @@ export const Blogs: BlogPost[] = [
     PostImage: "/images/home/slider/textile4.jpg",
     author: {
       name: "Karthik",
-      avatar: "/assets/team/image.png",
+      avatar: "",
     },
     date: "September 20, 2025",
     category: "Industrial Construction",

@@ -39,7 +39,7 @@ export default function About() {
     return (
         <WebLayout title="Abouts">
             <div>
-                <div className="relative flex h-[400px] w-full items-center justify-center">
+                <div className="relative flex h-[40vh] sm:h-[50vh] xl:h-[40vh] w-full items-center justify-center">
                     {/* Background Image */}
                     <img
                         src="/images/home/slider/textile4.jpg"
@@ -52,7 +52,7 @@ export default function About() {
 
                     {/* Text Content */}
                     <div className="absolute z-10 text-center text-white">
-                        <h1 className="mb-3 text-4xl font-bold">About Us</h1>
+                        <h1 className="mb-3 text-4xl md:text-6xl font-bold">About Us</h1>
                         <p className="px-[20%]">
                             Have an event in mind? Get in touch with our team
                             for catering, decoration, and complete event

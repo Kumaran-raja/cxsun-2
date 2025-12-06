@@ -49,7 +49,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ services }) => {
             <h3 className="text-xl text-foreground font-semibold mb-2 mt-4 line-clamp-1">{service.title}</h3>
             <div className="text-foreground mb-3 line-clamp-3"  dangerouslySetInnerHTML={{ __html: service.description }} />
             <a
-              href={`/services/${service.id}`}
+              href={`/service/${service.id}`}
               className="text-foreground font-medium hover:underline"
             >
               Learn more &rarr;
