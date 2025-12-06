@@ -20,6 +20,7 @@ const navigation = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/abouts' },
     { name: 'Services', href: '/services', mega: true },
+    { name: 'Blogs', href: '/blogs' },
     { name: 'Accreditations', href: '/accreditations' },
     { name: 'Contact', href: '/web-contacts' },
 ];

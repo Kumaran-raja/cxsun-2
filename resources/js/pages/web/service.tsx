@@ -433,7 +433,6 @@ const serviceData = [
 export default function Service() {
     const { id } = usePage<ServicePageProps>().props;
 
-    // Convert icon string → icon component
     const updatedServices = serviceData.map((s) => ({
         ...s,
         icon: iconMap[s.icon as IconName], // cast here too
