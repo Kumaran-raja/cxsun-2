@@ -4,7 +4,7 @@ import { FaBuilding, FaHome, FaIndustry, FaProjectDiagram, FaTools, FaWarehouse 
 export const serviceData:Service[] = [
     {
         id: 'comprehensive-textile-testing-services',
-        title: 'Physical Testing',
+        title: 'Comprehensive Textile Testing Services',
         description: `<p>
   At Altex Labs, we offer end-to-end <strong>Comprehensive Textile Testing Services</strong> covering
   fibres, yarns, fabrics, and finished garments. Our laboratory is equipped to conduct both
@@ -73,7 +73,7 @@ export const serviceData:Service[] = [
     },
     {
         id: 'physical-performance-testing',
-        title: 'Color Fastness',
+        title: 'Physical / Performance Testing',
         description: `<p>
     Our <strong>Physical & Performance Testing</strong> service evaluates how fabrics, yarns, and garments
     behave under real-world conditions. These tests help manufacturers, exporters, and brands ensure
@@ -142,7 +142,7 @@ export const serviceData:Service[] = [
 
     {
         id: 'colour-fastness-durability',
-        title: 'Chemical Testing',
+        title: 'Colour Fastness & Durability',
         description: `
   <p>
     Our <strong>Colour Fastness & Durability Testing</strong> ensures that fabrics and garments maintain their
@@ -215,7 +215,7 @@ export const serviceData:Service[] = [
     },
     {
         id: 'fibre-material-identification',
-        title: 'Fiber Analysis',
+        title: 'Fibre & Material Identification',
         description: `
   <p>
     Our <strong>Fibre & Material Identification</strong> service helps manufacturers, exporters, and brands verify the true
@@ -274,7 +274,7 @@ export const serviceData:Service[] = [
     },
     {
         id: 'chemical-regulatory-compliance',
-        title: 'Eco & Compliance',
+        title: 'Chemical & Regulatory Compliance',
         description: `
   <p>
     Our <strong>Chemical & Regulatory Compliance</strong> services ensure that textiles meet international
@@ -332,7 +332,7 @@ export const serviceData:Service[] = [
     },
     {
         id: 'custom-contract-testing',
-        title: 'Performance Tests',
+        title: 'Custom & Contract Testing',
         description: `
     <p>
       Our Custom & Contract Testing services are designed to meet the unique technical requirements

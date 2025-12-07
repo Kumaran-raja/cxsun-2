@@ -14,8 +14,8 @@ export type BlogPost = {
 };
 export const Blogs: BlogPost[] = [
   {
-    id: "1",
-    title: "The Future of Smart Homes in Modern Construction",
+    id: "Colour-Fastness",
+    title: "How to Improve Colour Fastness in Knitted Fabrics",
     description: `
       <h2>The Future of Smart Homes in Modern Construction</h2>
       <p>
@@ -55,8 +55,8 @@ export const Blogs: BlogPost[] = [
     isComment: false,
   },
   {
-    id: "2",
-    title: "Top 5 Trends in Commercial Building Design for 2025",
+    id: "Fabric-Shrinkage",
+    title: "Why Fabric Shrinkage Matters for Export Shipment",
     description: `
       <h2>Top 5 Trends in Commercial Building Design for 2025</h2>
       <p>
@@ -95,8 +95,8 @@ export const Blogs: BlogPost[] = [
     isComment: false,
   },
   {
-    id: "3",
-    title: "Essential Tips for Planning Industrial Construction Projects",
+    id: "Right-Abrasion-Tester ",
+    title: "Selecting the Right Abrasion Tester for Durable Fabrics",
     description: `
       <h2>Essential Tips for Planning Industrial Construction Projects</h2>
       <p>
