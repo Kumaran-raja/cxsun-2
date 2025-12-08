@@ -42,6 +42,24 @@ Route::get('/blogs', function () {
     ]);
 })->name('blogs');
 
+Route::get('/terms', function () {
+    return Inertia::render('web/TermsAndConditions', [
+        'canRegister' => Features::enabled(Features::registration()),
+    ]);
+})->name('terms');
+
+Route::get('/privacy', function () {
+    return Inertia::render('web/privacypolicy', [
+        'canRegister' => Features::enabled(Features::registration()),
+    ]);
+})->name('privacy');
+
+Route::get('/return', function () {
+    return Inertia::render('web/returnpolicy', [
+        'canRegister' => Features::enabled(Features::registration()),
+    ]);
+})->name('return');
+
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('dashboard', function () {
         return Inertia::render('dashboard');

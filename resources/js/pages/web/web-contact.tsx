@@ -6,7 +6,7 @@ export default function WebContact() {
     return (
         <WebLayout title="Contact">
             <main className="">
-                 <div className="relative flex h-[400px] w-full items-center justify-center">
+                 <div className="relative flex h-[40vh] sm:h-[50vh] xl:h-[40vh] w-full items-center justify-center">
                     {/* Background Image */}
                     <img
                         src="/images/home/slider/textile4.jpg"

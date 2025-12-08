@@ -68,7 +68,7 @@ const BrandMarquee: React.FC<BrandMarqueeProps> = ({
 
   return (
     <div className="">
-      <h1 className="text-center font-semibold uppercase pb-10">{text}</h1>
+      <h1 className="text-center font-semibold uppercase">{text}</h1>
       <div
         className={`relative w-full overflow-hidden`}
         onMouseEnter={() => setIsHovering(true)}
@@ -97,7 +97,7 @@ const BrandMarquee: React.FC<BrandMarqueeProps> = ({
                   loading="eager"
                 />
               ) : type === "big-text" ? (
-                <span className="text-foreground text-3xl md:text-4xl font-extrabold uppercase tracking-wide hover:text-primary transition-colors duration-300">
+                <span className="text-white text-3xl md:text-4xl font-extrabold uppercase tracking-wide hover:text-primary transition-colors duration-300">
                   {brand.name}
                 </span>
               ) : (

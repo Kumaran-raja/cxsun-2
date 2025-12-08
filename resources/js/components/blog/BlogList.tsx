@@ -25,7 +25,7 @@ const handleBlog = (id: string) => {
   return (
     <div className="">
       {/* Hero Section */}
-      <div className="relative h-[40vh] sm:h-[50vh] w-full hidden md:block">
+      <div className="relative h-[40vh] sm:h-[50vh] xl:h-[40vh] w-full hidden md:block">
         <img
           src={banner.image}
           alt="Sample"
@@ -33,12 +33,12 @@ const handleBlog = (id: string) => {
           className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-black/70" />
-        <div className="absolute inset-0 flex items-center">
+        <div className="absolute inset-0 flex items-center justify-center">
           <div className="md:w-2/3 px-5 lg:px-[10%] text-foreground space-y-4">
-            <h1 className="text-2xl text-white lg:text-6xl font-bold animate__animated animate__fadeIn animate__fast">
+            <h1 className="text-4xl md:text-6xl text-white text-center font-bold animate__animated animate__fadeIn animate__fast">
               {banner.title}
             </h1>
-            <p className="text-sm sm:text-md text-white lg:text-lg text-justify animate__animated animate__fadeIn animate__slow">
+            <p className="text-sm sm:text-md text-white lg:text-lg text-center animate__animated animate__fadeIn animate__slow">
               {banner.description}
             </p>
           </div>
@@ -80,7 +80,7 @@ const handleBlog = (id: string) => {
                 <div className="mt-2 text-xs text-muted-foreground flex flex-wrap gap-2">
                   <span className="font-semibold">{blog.author.name}</span>
                   <span>{blog.date}</span>
-                  <span className="bg-foreground px-2 rounded text-primary">
+                  <span className="bg-foreground px-2 rounded text-background">
                     {blog.category}
                   </span>
                   {/* <span>👍 {blog.l}</span> */}

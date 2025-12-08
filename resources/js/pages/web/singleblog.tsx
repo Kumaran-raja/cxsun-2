@@ -2,7 +2,6 @@ import { BlogPost, Blogs } from '@/data/blog';
 import WebLayout from '@/layouts/web-layout';
 import { usePage } from '@inertiajs/react';
 
-
 function SingleBlog() {
     const { id } = usePage<BlogPost>().props;
     const post = Blogs.find((p) => p.id === id);
@@ -22,9 +21,28 @@ function SingleBlog() {
     };
     return (
         <WebLayout title="SingleBlog">
-            <div
-                className="mt-20"
-            >
+             <div className="relative flex h-[40vh] sm:h-[50vh] xl:h-[40vh] w-full items-center justify-center">
+                {/* Background Image */}
+                <img
+                    src="/images/home/slider/textile4.jpg"
+                    alt="About hero image"
+                    className="h-full w-full object-cover"
+                />
+
+                {/* Dark Overlay */}
+                <div className="absolute inset-0 bg-black/40"></div>
+
+                {/* Text Content */}
+                <div className="absolute z-10 text-center text-white">
+                    <h1 className="text-whit mb-4 text-2xl md:text-4xl font-bold tracking-tight">
+                        {post.title}
+                    </h1>
+                    <p className="mb-6 text-xl text-white">
+                        {post.author.name}
+                    </p>
+                </div>
+            </div>
+            <div className="mt-5">
                 <div className="grid grid-cols-1 gap-8 px-5 md:px-[10%] lg:grid-cols-[70%_30%]">
                     <div>
                         <img
@@ -35,11 +53,17 @@ function SingleBlog() {
 
                         {/* Author */}
                         <div className="mt-4 flex items-center gap-3 text-sm text-muted-foreground">
-                            <img
-                                src={post.author.avatar}
-                                className="h-8 w-8 rounded-full object-cover"
-                                alt="Author"
-                            />
+                            {post.author.avatar ? (
+                                <img
+                                    src={post.author.avatar}
+                                    className="h-8 w-8 rounded-full object-cover"
+                                    alt={post.author.name}
+                                />
+                            ) : (
+                                <p className="h-8 w-8 bg-gray-700 capitalize flex items-center justify-center text-white font-extrabold rounded-full text-2xl">
+                                    {post.author.name.slice(0, 1)}
+                                </p>
+                            )}
                             <p className="font-semibold text-foreground">
                                 {post.author.name}
                             </p>

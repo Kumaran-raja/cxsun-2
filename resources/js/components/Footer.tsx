@@ -1,12 +1,15 @@
 import { cn } from '@/lib/utils';
 import { Link } from '@inertiajs/react';
-import { FaAngleRight, FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import {
+    FaAngleRight,
+    FaFacebookF,
+    FaInstagram,
+    FaLinkedinIn,
+} from 'react-icons/fa';
 
 export default function Footer() {
     return (
-        <footer className="bg-footer px-4 pt-16 pb-6 text-gray-300">
-            <hr className="border-ring/30" />
-            {/* ───── MAIN FOOTER CONTENT ───── */}
+        <footer className="bg-footer px-4 pb-6 text-gray-300">
             <div className="mx-auto grid grid-cols-1 gap-10 px-4 pt-6 md:grid-cols-4">
                 {/* About */}
                 <div>
@@ -97,7 +100,7 @@ export default function Footer() {
                         ].map((m, i) => (
                             <li
                                 key={i}
-                                className="flex items-center cursor-pointer gap-2 hover:text-footer-foreground"
+                                className="flex cursor-pointer items-center gap-2 hover:text-footer-foreground"
                             >
                                 <span>
                                     <FaAngleRight />
@@ -118,17 +121,37 @@ export default function Footer() {
                     <div className="flex flex-col gap-4">
                         {/* Facebook */}
                         <a
-                            href="https://www.facebook.com/YourPageLink"
+                            href="/terms"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-3 transition hover:text-footer-foreground"
                         >
                             <span className="text-base font-medium">
-                                Facebook
+                                Terms & Conditions
                             </span>
                         </a>
 
                         {/* Instagram */}
+                        <a
+                            href="/privacy"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-3 transition hover:text-footer-foreground"
+                        >
+                            <span className="text-base font-medium">
+                                Privacy Policy
+                            </span>
+                        </a>
+                         <a
+                            href="/return"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-3 transition hover:text-footer-foreground"
+                        >
+                            <span className="text-base font-medium">
+                                Return & Refund Policy
+                            </span>
+                        </a>
                         <a
                             href="https://www.instagram.com/YourPageLink"
                             target="_blank"
@@ -136,8 +159,16 @@ export default function Footer() {
                             className="flex items-center gap-3 transition hover:text-footer-foreground"
                         >
                             <span className="text-base font-medium">
-                                Instagram
+                                Events
                             </span>
+                        </a>
+                        <a
+                            href="https://www.instagram.com/YourPageLink"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-3 transition hover:text-footer-foreground"
+                        >
+                            <span className="text-base font-medium">News</span>
                         </a>
                     </div>
                 </div>

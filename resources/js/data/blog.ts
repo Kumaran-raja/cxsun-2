@@ -14,8 +14,8 @@ export type BlogPost = {
 };
 export const Blogs: BlogPost[] = [
   {
-    id: "1",
-    title: "The Future of Smart Homes in Modern Construction",
+    id: "Colour-Fastness",
+    title: "How to Improve Colour Fastness in Knitted Fabrics",
     description: `
       <h2>The Future of Smart Homes in Modern Construction</h2>
       <p>
@@ -41,7 +41,7 @@ export const Blogs: BlogPost[] = [
     PostImage: "/images/home/slider/textile4.jpg",
     author: {
       name: "Ravi",
-      avatar: "/assets/team/image.png",
+      avatar: "",
     },
     date: "September 5, 2025",
     category: "Construction & Technology",
@@ -55,8 +55,8 @@ export const Blogs: BlogPost[] = [
     isComment: false,
   },
   {
-    id: "2",
-    title: "Top 5 Trends in Commercial Building Design for 2025",
+    id: "Fabric-Shrinkage",
+    title: "Why Fabric Shrinkage Matters for Export Shipment",
     description: `
       <h2>Top 5 Trends in Commercial Building Design for 2025</h2>
       <p>
@@ -81,7 +81,7 @@ export const Blogs: BlogPost[] = [
     PostImage: "/images/home/slider/textile4.jpg",
     author: {
       name: "Ananya",
-      avatar: "/assets/team/image.png",
+      avatar: "",
     },
     date: "September 12, 2025",
     category: "Commercial Construction",
@@ -95,8 +95,8 @@ export const Blogs: BlogPost[] = [
     isComment: false,
   },
   {
-    id: "3",
-    title: "Essential Tips for Planning Industrial Construction Projects",
+    id: "Right-Abrasion-Tester ",
+    title: "Selecting the Right Abrasion Tester for Durable Fabrics",
     description: `
       <h2>Essential Tips for Planning Industrial Construction Projects</h2>
       <p>
@@ -120,7 +120,7 @@ export const Blogs: BlogPost[] = [
     PostImage: "/images/home/slider/textile4.jpg",
     author: {
       name: "Karthik",
-      avatar: "/assets/team/image.png",
+      avatar: "",
     },
     date: "September 20, 2025",
     category: "Industrial Construction",
